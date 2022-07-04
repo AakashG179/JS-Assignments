@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 4</title>
+</head>
+<body>
+    <h1>JavaScript Program To Find The Area Of A Triangle where Lengths of the three of its sides are 5, 6, 7.</h1>
+    <p>To find the area of triangle with the 3 sides, we have to use the Heron's Formula :- <br/>Area =√ [s (s-a) (s-b) (s-c)], where a, b, c = 5, 6, 7. and s = (a+b+c)/2</p>
+    <p id="demo"></p>
+    <script>
+        const a = 5;
+        const b = 6;
+        const c = 7;
+        let s = (a+b+c)/2;
+        let area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+        let element = document.getElementById("demo");
+        element.innerHTML = "Area of a triangle with 3 sides is : " + area;
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment 1 - Program 1</title>
+</head>
+<body>
+<h1>JavaScript Program To Display The Current Day And Time</h1>
+<p id="demo"></p>
+<script>
+function addzero(i){
+  if (i<10){
+    i = "0" + i;
+    return i;
+  }
+  else{
+    return i;
+  }
+}
+function settime(i){
+  if (i>12 && i<=23){
+    return i = (i - 12) + " PM ";
+  }
+  else if (i==12){
+    return i + " PM ";
+  }
+  else{
+    return i + " AM ";
+  }
+}
+const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+const d = new Date(); // A date object is created here with the help of the Date() constructor.
+let day = d.getDay();  // It will return the days in the range of [0-6] where 0 - Sunday and 6 - Saturday.
+let h = settime(d.getHours()); // d.getHours() return hours in the range of [0-23] of the date.
+let m = addzero(d.getMinutes()); // It will return minutes in the range of [0-59] of the date.
+let s = addzero(d.getSeconds()); // It will return seconds in the range of [0-59] of the date.
+let currday = "Today is : " + weekdays[day];
+let currtime = "<br/>Current time is : " + h +  ": " + m + " : " + s;
+let element = document.getElementById("demo")
+element.innerHTML = currday + currtime;
+</script>
+</body>
+</html>

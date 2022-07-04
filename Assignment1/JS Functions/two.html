@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 2</title>
+</head>
+<body>
+    <h1>JavaScript Function to check whether a given string is palindrome or not.</h1>
+    <input type="text" id="ultra" />
+    <button onclick="isPalindrome()">Result</button>
+    <p id="demo"></p>
+    <script>
+        function reverseString(val){
+            if (val === ""){
+                return "";
+            }
+            else{
+                return reverseString(val.substr(1)) + val.charAt(0);
+            }
+            
+        }
+
+        function isPalindrome(){
+            const val = document.getElementById("ultra").value;
+            rev = reverseString(val)
+            console.log(rev)
+            if (val === rev){
+                document.getElementById("demo").innerHTML = val + " is a Palindrome."
+            }
+            else{
+                document.getElementById("demo").innerHTML = val + " is not a Palindrome."
+            }
+        }
+    </script>
+</body>
+</html>

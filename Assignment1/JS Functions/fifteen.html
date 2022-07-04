@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>assignment 1 - Program 15</title>
+</head>
+<body>
+    <h1>JavaScript function to compute the value of b^n where n is the exponent and b is the bases. Accept b and n from the user and display the result.</h1>
+        Enter the value of b: <input type="text" id="inp1">
+        <br/>
+        Enter the value of n: <input type="text" id="inp2">
+        <br/>
+        <button onclick="exp(document.getElementById('inp1').value, document.getElementById('inp2').value)">Check The Result</button>
+        <p id="demo">Output: </p>
+    <script>
+        function exp(b,n)
+{
+        var ans = 1;
+        for (var i =1; i <= n; i++)
+        {
+                ans = b * ans;        
+        }
+        document.getElementById("demo").innerHTML += ans;
+}
+    </script>
+</body>
+</html>

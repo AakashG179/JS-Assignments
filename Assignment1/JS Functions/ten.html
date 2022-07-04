@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 10</title>
+</head>
+<body>
+    <h1>JavaScript function which returns the n rows by n columns identity matrix.</h1>
+    Enter a number here: <input type="text" id="ultra" />
+    <button onclick="run(document.getElementById('ultra').value)">Get The Result</button>
+    <p id="demo"></p>
+    <script>
+        function run(n) {
+natural = Number(n);
+var i;
+var j;
+
+for (i=0; i < natural; i++)
+{
+  for (j=0; j < natural; j++)
+  {
+       if (i === j)
+       {
+        document.getElementById("demo").innerHTML += " 1 ";
+       }
+              
+       else 
+        {
+        document.getElementById("demo").innerHTML += " 0 ";
+        }
+   }
+   document.getElementById("demo").innerHTML += "<br/>";
+}
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+  
+<head>
+    <title>Assignment 1 - Program 29</title> 
+</head> 
+      
+<body>       
+    <h1>Javascript function To Get The function Name</h1> 
+    <p id="demo"></p>
+    <script> 
+        // function getFuncName() {
+        //     return getFuncName.caller.name
+        // }
+          
+        // function teddy() { 
+        //     console.log(getFuncName())
+        // }
+        // teddy()     
+
+        function cool() {
+            var me = arguments.callee.toString();
+            console.log(me);
+            me = me.substr('function '.length);     
+            console.log(me);
+            me = me.substr(0, me.indexOf('('));     
+            console.log(me);
+            alert(me);
+            document.getElementById("demo").innerHTML =me;
+        }
+        cool();  
+    </script> 
+</body> 
+  
+</html>

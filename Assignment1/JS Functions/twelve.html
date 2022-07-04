@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 12</title>
+</head>
+<body>
+    <h1>JavaScript function which says whether a number is perfect.</h1>
+    <input type="text" id="inp" />
+    <button onclick="isPerfect(document.getElementById('inp').value)">Check The Result</button>
+    <button onclick="nextPerfectNumber(document.getElementById('inp').value)">Next Perfect Number</button>
+    <p id="demo"></p>
+    <script>
+        function nextPerfectNumber(val){
+            val = Number(val);
+            val += 1;
+            while (1){
+                if (isPerfect(val)){
+                    document.getElementById("demo").innerHTML = "<br/>" + val + " is a next perfect number.";
+                    break;
+                }
+                val += 1;
+            }
+        }
+        function isPerfect(val){
+            count = 0;
+            value = Number(val);
+            for (i=1; i<val; i++){
+                if (val % i === 0){
+                    count += i;
+                }    
+            }
+            if (count === value){
+                document.getElementById("demo").innerHTML =  val + " is a perfect number";
+                return 1;
+            }
+            else{
+                document.getElementById("demo").innerHTML =  val + " is not a perfect number";
+                return 0;
+            }
+        }
+    </script>
+</body>
+</html>

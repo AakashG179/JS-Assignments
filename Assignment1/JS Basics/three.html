@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 3</title>
+</head>
+<body>
+    <h1>JavaScript Program To Get The Current Date In The Format of MM/DD/YYYY</h1>
+    <p id="demo"></p>
+    <script>
+        const date = new Date()
+        let m = date.getMonth() + 1; // It will return the month in the range of [0-11].
+        let d = date.getDate(); // It will return the date in the range of [1-31].
+        let y = date.getFullYear(); // It will return the year in yyyy.
+        let element = document.getElementById("demo");
+        element.innerHTML = "Current Date is: " + m + "/" + d + "/" + y;
+    </script>
+</body>
+</html>

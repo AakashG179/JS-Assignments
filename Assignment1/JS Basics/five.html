@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 1 - Program 5</title>
+</head>
+<body>
+    <h1>JavaScript Program To Rotate The String Entered By The User.</h1>
+    <input type="text" id="ulta" />
+    <button onclick="animate_string()">Rotate The String</button>
+    <p id="result1"></p>
+    <script>
+        function animate_string() {
+    const element = document.getElementById("ulta");
+    const output1 = document.querySelector('#result1')
+    let text = element.value;
+    setInterval(function () {
+        text = text[text.length - 1] + text.substring(0, text.length - 1);  //A string is just a one-dimensional array — a vector — with elements of the type character.
+        // output1.textContent = text;
+        output1.innerHTML = text; //also work
+    }, 1000);
+}
+    </script>
+</body>
+</html>

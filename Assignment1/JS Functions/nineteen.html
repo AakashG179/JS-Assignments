@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 19</title>
+</head>
+<body>
+    <h1>JavaScript function that returns array elements larger than a number.</h1>
+    <script>
+        let returnLarger = (arr, num) => {
+  return arr.reduce((acc, curr)=>{  
+    if(curr > num){
+      return acc.concat(curr)  // Concatenate the acc with arr
+    }else{
+      return acc
+    }
+  }, [])   // Initialize the accumulator with an empty array
+}
+  
+document.write("Given array is: " + [65, 16, 0, 6, 64, 1, 68]);
+document.write("<br/>");
+document.write("Number is: " + 16);
+document.write("<br/>");
+document.write("Array elements greater than number are: " + returnLarger( [65, 16, 0, 6, 64, 1, 68], 16))
+document.write("<br/>");
+    </script>
+</body>
+</html>

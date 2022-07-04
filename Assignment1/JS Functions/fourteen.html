@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 14</title>
+</head>
+<body>
+    <h1>JavaScript function to convert an amount to coins.</h1>
+    Enter your amount here: <input type="text" id="ultra" />
+    <button onclick="run(document.getElementById('ultra').value, [25, 10, 5, 2, 1])">Result</button>
+    <p id="demo">Your Amount has the following coins: </p>
+    <script>
+        function run(amount, coins){
+            amount = Number(amount);
+            if (amount === 0){
+                return "";
+            }
+            else{
+                if (amount >= coins[0]){
+                    left = (amount - coins[0]);
+                    document.getElementById("demo").innerHTML += " " + coins[0];
+                    return run(left, coins);
+                }
+                else{
+                    coins.shift();
+                    return run(amount, coins);
+                }
+            } 
+        }
+    </script>
+</body>
+</html>

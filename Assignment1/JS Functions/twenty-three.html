@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 23</title>
+</head>
+<body>
+    <h1>JavaScript function to find the first not repeated character.</h1>
+    Enter a string here: <input type="text" id="inp1" />
+    <button onclick="check(document.getElementById('inp1').value)">Result</button>
+    <p id="demo"></p>
+    <script> // aakash - k > aaahsk
+        function check(str) {
+ var arr = str.split('');
+ var result = '';
+ var ctr = 0; 
+  for (var x = 0; x < arr.length; x++) {
+   ctr = 0;
+  for (var y = 0; y < arr.length; y++) {
+  if (arr[x] === arr[y]) {
+    ctr+= 1;
+    }
+   }
+
+if (ctr < 2) {
+  result = arr[x];
+  break;
+  }
+}
+document.getElementById("demo").innerHTML = "Output is: " + result;
+}
+    </script>
+</body>
+</html>

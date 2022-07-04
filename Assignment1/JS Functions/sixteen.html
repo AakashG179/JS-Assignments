@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 16</title>
+</head>
+<body>
+    <h1>JavaScript function to extract unique characters from a string entered by the user.</h1>
+    <input type="text" id="ultra">
+    <button onclick="uniqueChars(document.getElementById('ultra').value)">Result</button>
+    <p id="demo"></p>
+    <script>
+        function uniqueChars(val){
+            newstring = "";
+            for (i=0; i<val.length; i++){
+                if (newstring.includes(val[i]) === false){
+                    newstring += val[i];
+                }
+            }
+            document.getElementById("demo").innerHTML = newstring;
+        }
+    </script>
+</body>
+</html>

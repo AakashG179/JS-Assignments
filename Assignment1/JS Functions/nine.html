@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 9</title>
+</head>
+<body>
+    <h1>JavaScript function which accepts an argument and returns the type.</h1>
+    <p id="demo"></p>
+    <script>
+        arr = ['w3resource', 12, false, Function(), Object()];
+        newarr = [];
+        function run(arr){
+            for (i=0; i<arr.length; i++){
+                newarr.push([typeof arr[i]]);
+                document.getElementById("demo").innerHTML = arr + " ---> " + newarr;
+            }
+        }
+        run(arr);
+    </script>
+</body>
+</html>

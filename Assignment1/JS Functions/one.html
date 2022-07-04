@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 1</title>
+</head>
+<body>
+    <h1>JavaScript Function that reverse a number entered by the user</h1>
+    <input type="text" id="inputField">
+    <button onclick="run()">Reverse A Number</button>
+    <p id="demo"></p>
+    <script>
+        function run(){
+            const val = Number(document.getElementById("inputField").value);
+            value = val + ""
+            document.getElementById("demo").innerHTML = value.split("").reverse().join("");
+        }
+    </script>
+</body>
+</html>

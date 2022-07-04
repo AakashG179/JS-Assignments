@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 11</title>
+</head>
+<body>
+    <h1>JavaScript Program To Convert Temperature to and from celsius, fahrenheit.</h1>
+    <input type="text" id="ultra" />
+    <button onclick="run1()">Celsius To Fahrenheit</button>
+    <button onclick="run2()">Fahrenheit To Celsius</button>
+    <p id="demo"></p>
+    <script>
+        function cToF(val) 
+        {
+  var cTemp = val;
+  var cToFahr = cTemp * 9 / 5 + 32;
+  var message = cTemp + '\xB0C is ' + cToFahr + ' \xB0F.';
+    document.getElementById("demo").innerHTML = message;
+}
+        function fToC(val) 
+        {
+        var fTemp = val;
+        var fToCel = (fTemp - 32) * 5 / 9;
+        var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+        document.getElementById("demo").innerHTML += "<br/>" + message;
+        }
+        function run1(){
+            let element = document.getElementById("ultra");
+            let val = element.value;
+            cToF(val);
+        }
+        function run2(){
+            let element = document.getElementById("ultra");
+            let val = element.value;
+            fToC(val);
+        }
+    </script>
+</body>
+</html>

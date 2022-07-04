@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 1 - Program 7</title>
+</head>
+<body>
+    <h1>JavaScript program to find 1st January be a Sunday between 2014 and 2050</h1>
+    <button onclick="run()">Get The Result</button>
+    <script>
+        function run(){
+            for (let year = 2014; year<=2050; year++){
+                const d = new Date(year, 0, 1);
+                if (d.getDay() === 0){
+                    console.log("1st January was a Sunday in " + year)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

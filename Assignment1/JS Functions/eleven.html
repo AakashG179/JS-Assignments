@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 11</title>
+</head>
+<body>
+    <h1>JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers</h1>
+    <p id="demo"></p>
+    <script>
+        function getValue(arr){
+            console.log(arr)
+            arr.sort();
+            document.getElementById("demo").innerHTML = "Given array is: " + arr + "<br/>Second Lowest Value is: " + arr[1] + "<br/> Second Greatest Value is: " + arr[arr.length-2];
+        }
+        getValue([4,3,1,2,5]);
+    </script>
+</body>
+</html>

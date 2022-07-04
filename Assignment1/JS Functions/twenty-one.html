@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 21</title>
+</head>
+<body>
+    <h1>JavaScript function to get all possible subset with a fixed length (for example 2) combinations in an array.</h1>
+    <button onclick="check([1,2,3], 2)">Result</button>
+    <p id="demo"></p>
+    <script>
+        function check(val, let){
+            val = val.join("");
+            console.log(val);
+            let combinations = [];
+      for(let i = 0 ;i < val.length; i++)
+        {
+            for (j=i+1; j<= val.length; j++){
+            combinations.push(val.slice(i , j));
+            }
+        }
+   document.getElementById("demo").innerHTML = combinations;
+}
+    </script>
+</body>
+</html>

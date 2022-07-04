@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 3</title>
+</head>
+<body>
+    <h1>JavaScript function that generates all combinations of a string.</h1>
+    <input type="text" id="ultra" />
+    <button onclick="check()">Result</button>
+    <p id="demo"></p>
+    <script>
+        function check(){
+            let val = document.getElementById("ultra").value;
+            let combinations = [];
+      for(let i = 0 ;i < val.length; i++)
+    {
+        for(let j = i + 1; j< val.length + 1; j++)
+        {
+            combinations.push(val.slice(i , j));
+        }
+    }
+   document.getElementById("demo").innerHTML = combinations;
+}
+    </script>
+</body>
+</html>

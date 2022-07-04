@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 6</title>
+</head>
+<body>
+    <h1>JavaScript function that accepts a string as a parameter and find the longest word within the string</h1>
+    <input type="text" id="ultra" />
+    <button onclick="run()">Get The Result</button>
+    <p id="demo"></p>
+    <script>
+        function run(){
+            val = document.getElementById("ultra").value;
+            find_longest_word(val);
+        }
+        function find_longest_word(str)
+{
+  var array1 = str.split(" ")
+  console.log(array1);
+  var result = array1[0];
+
+  for(var x = 1 ; x < array1.length ; x++)
+  {
+    if(result.length < array1[x].length)
+    {
+    result = array1[x];
+    } 
+  }
+  return document.getElementById("demo").innerHTML = result;
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 20</title>
+</head>
+<body>
+    <h1>JavaScript function that generates a string id (specified length) of random characters.</h1>
+    <button onclick="makeid(8)">Get The Result</button>
+    <p id="demo">Output: </p>
+    <script>
+        function makeid(l)
+{
+var text = "";
+var char_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+for(var i=0; i < l; i++ )
+{  
+text += char_list.charAt(Math.floor(Math.random() * char_list.length));
+}
+document.getElementById("demo").innerHTML = "Unique ID is: " + text;
+}
+    </script>
+</body>
+</html>

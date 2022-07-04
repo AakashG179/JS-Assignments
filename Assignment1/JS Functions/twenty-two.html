@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 22</title>
+</head>
+<body>
+    <h1>JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.</h1>
+    Enter a string here: <input type="text" id="inp1" />
+    Enter a letter here: <input type="text" id="inp2" />
+    <button onclick="check(document.getElementById('inp1').value, document.getElementById('inp2').value)">Result</button>
+    <p id="demo"></p>
+    <script>
+        function check(str, let){
+            count = 0;
+            for (i=0; i<str.length; i++){
+                if (str[i]===let){
+                    count += 1;
+                }
+            }
+            document.getElementById("demo").innerHTML = "Number of occurrences of letter " + let + " : " + count;
+        }
+    </script>
+</body>
+</html>

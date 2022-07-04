@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>assignment 1 - Program 13</title>
+</head>
+<body>
+    <h1>JavaScript function to compute the factors of a positive integer</h1>
+    <input type="text" id="name" />
+    <button onclick="run(document.getElementById('name').value)">Result</button>
+    <p id="demo"></p>
+    <script>
+        function run(val){
+            count = [];
+            val = Number(val);
+            for (i=1; i<=val; i++){
+                if (val%i===0){
+                    count.push(i);
+                }
+            }
+            document.getElementById("demo").innerHTML = "Factors of " + val + " are: " + count;
+        }
+    </script>
+</body>
+</html>

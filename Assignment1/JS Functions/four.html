@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 4</title>
+</head>
+<body>
+    <h1>JavaScript function that returns a passed string with letters in alphabetical order.</h1>
+    <input type="text" id="ultra" />
+    <button onclick="run()">Get The Result</button>
+    <p id="demo"></p>
+    <script>
+        function run(){
+            const val = document.getElementById("ultra").value;
+  var arr = val.split('');
+  var tmp;
+  for(var i = 0; i < arr.length; i++){
+    for(var j = i + 1; j < arr.length; j++){
+      /* if ASCII code greater then swap the elements position*/
+      if(arr[i] > arr[j]){
+        tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+      }
+    }
+  }
+  return document.getElementById("demo").innerHTML = arr.join('');
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 17</title>
+</head>
+<body>
+    <h1>JavaScript function to get the number of occurrences of each letter in specified string.</h1>
+    <input type="text" id="ultra">
+    <button onclick="ofel(document.getElementById('ultra').value)">Result</button>
+    <p id="demo"></p>
+    <script>
+        function ofel(val){
+            count = 0;
+            val = val.split("").sort().join("");
+            for (i=0; i<val.length; i++){
+                if (val[i] === val[i+1]){
+                    count += 1;
+                }
+                else{
+                    document.getElementById("demo").innerHTML += " " + val[i] + " : " + count; //aaahsk
+                    count = 0;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

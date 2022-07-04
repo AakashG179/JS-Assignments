@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1 - Program 28</title>
+</head>
+<body>
+    <h1>JavaScript Program to pass a JavaScript Function as a Parameter</h1>
+    <p id="demo"></p>
+    <script>
+        function greet() {
+    return 'Hello ';
+}
+
+// passing function greet() as a parameter
+function name(user, func)
+{
+
+    // accessing passed function
+    const message = func();
+
+    document.getElementById("demo").innerHTML += (`${message} ${user}`);
+    document.getElementById("demo").innerHTML += "<br/>";   
+}
+
+name('John', greet);
+name('Jack', greet);
+name('Sara', greet);
+    </script>
+</body>
+</html>
