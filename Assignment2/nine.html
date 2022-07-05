@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 2 - Program 9</title>
+</head>
+<body>
+    <h1>JavaScript program to find the armstrong numbers of 3 digits.
+        Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself.</h1>
+        Enter the number: <input type="text" id="inp1">
+        <button onclick="run(document.getElementById('inp1').value)">Result</button>
+        <p id="demo"></p>
+        <script>
+            function run(val){
+                num = Number(val);  //371
+                m = 0;
+                while(num>0){
+                    n = num % 10; // 1
+                    m += n*n*n; // 1*1*1 = 1
+                    num = (num-n)/10    // 37
+            }
+            if (val==m){
+            document.querySelector("#demo").innerHTML += val + " is an Armstrong Number. <br/>";
+            }
+            else{
+                document.querySelector("#demo").innerHTML += val + " is not an Armstrong Number. <br/>";
+            }
+        }
+        </script>
+</body>
+</html>

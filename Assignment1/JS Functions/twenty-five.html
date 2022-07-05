@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Assignment 1 - Program 25</title>
+</head>
+<body>
+    <h1>
+        JavaScript function that accept a list of country names as input and returns the longest country name as output.
+    </h1>
+    <p id="demo"></p>
+    <script>
+        val = ["China", "Chicago", "Japan", "United States Of America"];
+        document.write("Given Elements are: " + val);
+        function longest_string(val){
+            var max = val[0];
+            for (i=1; i<val.length; i++){
+                if (max.length < val[i].length){
+                    max = val[i];
+                }
+            }
+            document.getElementById("demo").innerHTML = "Longest Country Name is: " + max;
+        }
+        longest_string(val);
+//         function Longest_Country_Name(country_name)
+//   {
+//   return country_name.reduce(function(lname, country) 
+//   {
+//     return lname.length > country.length ? lname : country;
+//   }, 
+// "");
+// }
+// console.log(Longest_Country_Name(["Australia", "Germany", "United States of America"]));
+    </script>
+</body>
+</html>

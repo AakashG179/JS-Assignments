@@ -14,12 +14,17 @@
             let combinations = [];
       for(let i = 0 ;i < val.length; i++)
         {
-            for (j=i+1; j<= val.length; j++){
-            combinations.push(val.slice(i , j));
+            for (j=0; j< val.length; j++){
+                console.log(val.slice(i, j));
+                // if (val.slice(i, j).length == let){
+                    // if (val.substr(i, j).length == let){
+                        // combinations.push(val.substr(i , j));
+                    // combinations.push(val.slice(i , j));
+                }
             }
         }
-   document.getElementById("demo").innerHTML = combinations;
-}
+//    document.getElementById("demo").innerHTML = combinations;
+// }
     </script>
 </body>
 </html>

@@ -16,7 +16,6 @@
             else{
                 return reverseString(val.substr(1)) + val.charAt(0);
             }
-            
         }
 
         function isPalindrome(){
@@ -24,10 +23,10 @@
             rev = reverseString(val)
             console.log(rev)
             if (val === rev){
-                document.getElementById("demo").innerHTML = val + " is a Palindrome."
+                document.getElementById("demo").innerHTML += val + " is a Palindrome.<br/>"
             }
             else{
-                document.getElementById("demo").innerHTML = val + " is not a Palindrome."
+                document.getElementById("demo").innerHTML += val + " is not a Palindrome."
             }
         }
     </script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 2 - Program 4</title>
+</head>
+<body>
+    <h1>JavaScript conditional statement to find the largest of five numbers. Display an alert box to show the result.</h1>
+    <script>
+        var a = -5;
+        var b = -2;
+        var c = -6;
+        var d = 0;
+        var e = -1;
+        max = a;
+        arr = [a, b, c, d, e];
+        for (i=1; i<arr.length; i++){
+            if (max<arr[i]){
+                max = arr[i];
+            }
+        }
+        console.log("Given Numbers are: " + arr);
+        console.log("Larger Number is " + max);
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 2 - Program 10</title>
+</head>
+<body>
+    <h1>
+        JavaScript program to construct the following pattern, using a nested for loop.
+        <p id="demo"></p>
+    </h1>
+    <script>
+        for (i=1; i<=5; i++){
+            for (j=1; j<i+1; j++){
+                document.querySelector("#demo").innerHTML += "*";
+            }
+            document.querySelector("#demo").innerHTML += "<br/>";
+        }
+    </script>
+</body>
+</html>
